@@ -9,8 +9,12 @@ export const useFetchCharacter = () => {
     
     const searchCharacters = async () => {
         const newCharacters = await getCharacters();
-        setCharacters( newCharacters );
-        setIsLoading( false );
+
+        setTimeout(() => {
+            setCharacters( newCharacters );
+            setIsLoading( false );
+        }, 2000);
+     
     }
     
     useEffect(() => {
